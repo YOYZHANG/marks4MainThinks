@@ -1,18 +1,4 @@
 # topic
-
-## san
-
-## reactive & proxy handler
-
-## rn
-
-## redux
-
-
-# books
-
-## react
-## 代码大全
-
-
-
+## 11.16
+1. event
+2. immutable
