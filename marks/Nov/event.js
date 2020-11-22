@@ -44,9 +44,9 @@ console.log(que1);
 class EventsEmitter {
   constructor() {
     // 句柄，这个应该就是存储on的消息
-    this.handlerQueueSet = new QueueSet();
+    this.hQueueSet = new QueueSet();
     // 这个是？
-    this.messageQueuSet = new QueueSet();
+    this.mQueuSet = new QueueSet();
   }
   
   // 融合多条事件流成为一条
@@ -55,8 +55,8 @@ class EventsEmitter {
   }
   
   fireMessage(type, msg) {
-    let que = this.handlerQueueSet.get(type);
-    this.messageQueue.pushTo(type, {type,msg});
+    let que = this.hQueueSet.get(type);
+    this.mQueue.pushTo(type, {type,msg});
     // 这里once要怎么用？
     
     for (let handler of que) {
@@ -80,13 +80,6 @@ class EventsEmitter {
     
     return this;
   }
-  on() {}
-  delHandler(){}
-  off() {}
-  removeListener() {}
-  saveHandlerToBuffer() {}
-  clearHandlerBuffer() {}
-  handlerWrapper() {}
 }
 
 var testA = new EventsEmitter();
