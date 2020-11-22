@@ -1,10 +1,5 @@
 // Event Review
-
 // fake code
-
-
-
-// 队列的实现
 
 class QueueSet {
   constructor() {
@@ -70,10 +65,7 @@ class EventsEmitter {
       if(once) {
         que.del(type, handler);
       }
-    }
-    
-    
-    
+    } 
   }
   emit() {}
   onMessage(type, cb, options) {
